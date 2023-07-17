@@ -1,0 +1,25 @@
+{
+  "name": "openai-api",
+  "version": "1.0.0",
+  "description": "API OpenAI hands-on",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/palamarchukser/openai-api.git"
+  },
+  "author": "Serhii Palamarchuk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/palamarchukser/openai-api/issues"
+  },
+  "homepage": "https://github.com/palamarchukser/openai-api#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "openai": "^3.3.0",
+    "readline-sync": "^1.4.10"
+  }
+}
