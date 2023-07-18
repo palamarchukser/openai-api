@@ -1,0 +1,22 @@
+{
+    "name": "openai_api/php",
+    "autoload": {
+        "psr-4": {
+            "OpenaiApi\\Php\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "palamarchukser",
+            "email": "serhii.palamarchuk@chess.com"
+        }
+    ],
+    "require": {
+        "orhanerday/open-ai": "^4.8"
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    }
+}
