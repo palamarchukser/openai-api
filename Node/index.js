@@ -14,6 +14,7 @@ import {} from 'dotenv/config';
     const user_input = readlineSync.question('Enter your question: ');
 
     const messages = [];
+    let errorMessage;
     for (const [input, completion] of history) {
       messages.push({ role: 'user', content: input });
       messages.push({ role: 'assistant', content: completion });
@@ -32,7 +33,12 @@ import {} from 'dotenv/config';
 
       history.push([user_input, completion]);
     })
-    .catch(({ response, message }) => console.log(response.status ? `${response.status}: ${response.response}` : message));
+    .catch(({ response, message }) => errorMessage = response.status ? `${response.status}: ${response.response}` : message);
+
+    if (errorMessage) {
+      console.log(errorMessage);
+      return;
+    }
 
     const isNextCompetition = readlineSync.question('\nWould you like to continue the conversation? (Y/N)');
 
